@@ -22,11 +22,11 @@ class AppTest {
 
         List<Integer> numbers3 = new ArrayList<>(Arrays.asList(1, 4, -23, 23));
         List<Integer> numbers3Cli = App.take(numbers3, 5);
-        assertThat(numbers3).isEqualTo(numbers3);
+        assertThat(numbers3Cli).isEqualTo(numbers3);
 
         List<Integer> numbers4 = new ArrayList<>(Arrays.asList(1, 2, 3, 4));
-        List<Integer> numbers4Cli = App.take(numbers2, -1);
-        assertThat(numbers2Cli).isEmpty();
+        List<Integer> numbers4Cli = App.take(numbers4, -1);
+        assertThat(numbers4Cli).isEmpty();
         // END
     }
 }
