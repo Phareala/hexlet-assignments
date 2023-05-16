@@ -25,7 +25,10 @@ public class App {
                 result.put(data2.getKey(), "added");
             }
         }
+        AssertionError sd = new AssertionError();
         return result;
+        psvm
+
     }
 }
 //END

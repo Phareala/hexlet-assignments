@@ -9,11 +9,17 @@ import java.nio.file.Path;
 import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.Test;
 import static org.assertj.core.api.Assertions.assertThat;
+import static org.assertj.core.api.InstanceOfAssertFactories.ARRAY;
 
 class AppTest {
 
     private static String data1;
     private static String data2;
+
+    public static void main(String[] args) {
+        int[] num1 = {1,2,2,3};
+    }
+
 
     private static Path getFixturePath(String fileName) {
         return Paths.get("src", "test", "resources", "fixtures", fileName)
