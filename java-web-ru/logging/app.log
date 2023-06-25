@@ -1,0 +1,208 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE log SYSTEM "logger.dtd">
+<log>
+<record>
+  <date>2023-06-25T17:05:30.956966250Z</date>
+  <millis>1687712730956</millis>
+  <nanos>966250</nanos>
+  <sequence>0</sequence>
+  <logger>org.apache.coyote.http11.Http11NioProtocol</logger>
+  <level>INFO</level>
+  <class>org.apache.coyote.AbstractProtocol</class>
+  <method>init</method>
+  <thread>1</thread>
+  <message>Initializing ProtocolHandler ["http-nio-auto-1"]</message>
+</record>
+<record>
+  <date>2023-06-25T17:05:30.972843942Z</date>
+  <millis>1687712730972</millis>
+  <nanos>843942</nanos>
+  <sequence>1</sequence>
+  <logger>org.apache.tomcat.util.net.NioSelectorPool</logger>
+  <level>INFO</level>
+  <class>org.apache.tomcat.util.net.NioSelectorPool</class>
+  <method>getSharedSelector</method>
+  <thread>1</thread>
+  <message>Using a shared selector for servlet write/read</message>
+</record>
+<record>
+  <date>2023-06-25T17:05:30.985583045Z</date>
+  <millis>1687712730985</millis>
+  <nanos>583045</nanos>
+  <sequence>2</sequence>
+  <logger>org.apache.catalina.core.StandardService</logger>
+  <level>INFO</level>
+  <class>org.apache.catalina.core.StandardService</class>
+  <method>startInternal</method>
+  <thread>1</thread>
+  <message>Starting service [Tomcat]</message>
+</record>
+<record>
+  <date>2023-06-25T17:05:30.986712685Z</date>
+  <millis>1687712730986</millis>
+  <nanos>712685</nanos>
+  <sequence>3</sequence>
+  <logger>org.apache.catalina.core.StandardEngine</logger>
+  <level>INFO</level>
+  <class>org.apache.catalina.core.StandardEngine</class>
+  <method>startInternal</method>
+  <thread>1</thread>
+  <message>Starting Servlet engine: [Apache Tomcat/8.5.69]</message>
+</record>
+<record>
+  <date>2023-06-25T17:05:31.117416019Z</date>
+  <millis>1687712731117</millis>
+  <nanos>416019</nanos>
+  <sequence>4</sequence>
+  <logger>org.apache.coyote.http11.Http11NioProtocol</logger>
+  <level>INFO</level>
+  <class>org.apache.coyote.AbstractProtocol</class>
+  <method>start</method>
+  <thread>1</thread>
+  <message>Starting ProtocolHandler ["http-nio-auto-1-43467"]</message>
+</record>
+<record>
+  <date>2023-06-25T17:05:32.117532966Z</date>
+  <millis>1687712732117</millis>
+  <nanos>532966</nanos>
+  <sequence>5</sequence>
+  <logger>exercise.servlet.SessionServlet</logger>
+  <level>INFO</level>
+  <class>exercise.servlet.SessionServlet</class>
+  <method>login</method>
+  <thread>22</thread>
+  <message>Пользователь с email: lavern.keeling@gmail.com авторизовался.</message>
+</record>
+<record>
+  <date>2023-06-25T17:05:32.209850185Z</date>
+  <millis>1687712732209</millis>
+  <nanos>850185</nanos>
+  <sequence>6</sequence>
+  <logger>exercise.servlet.SessionServlet</logger>
+  <level>INFO</level>
+  <class>exercise.servlet.SessionServlet</class>
+  <method>login</method>
+  <thread>26</thread>
+  <message>Пользователь с email: shoshana.haley@hotmail.com авторизовался.</message>
+</record>
+<record>
+  <date>2023-06-25T17:05:32.223458527Z</date>
+  <millis>1687712732223</millis>
+  <nanos>458527</nanos>
+  <sequence>7</sequence>
+  <logger>exercise.servlet.SessionServlet</logger>
+  <level>INFO</level>
+  <class>exercise.servlet.SessionServlet</class>
+  <method>login</method>
+  <thread>29</thread>
+  <message>Пользователь с email: suzann.barrows@hotmail.com авторизовался.</message>
+</record>
+<record>
+  <date>2023-06-25T17:05:32.275655608Z</date>
+  <millis>1687712732275</millis>
+  <nanos>655608</nanos>
+  <sequence>8</sequence>
+  <logger>exercise.servlet.SessionServlet</logger>
+  <level>INFO</level>
+  <class>exercise.servlet.SessionServlet</class>
+  <method>login</method>
+  <thread>30</thread>
+  <message>Пользователь с email: lavern.keeling@gmail.com авторизовался.</message>
+</record>
+<record>
+  <date>2023-06-25T17:05:32.328876767Z</date>
+  <millis>1687712732328</millis>
+  <nanos>876767</nanos>
+  <sequence>9</sequence>
+  <logger>exercise.servlet.SessionServlet</logger>
+  <level>INFO</level>
+  <class>exercise.servlet.SessionServlet</class>
+  <method>login</method>
+  <thread>24</thread>
+  <message>Пользователь с email: lavern.keeling@gmail.com авторизовался.</message>
+</record>
+<record>
+  <date>2023-06-25T17:05:32.352974011Z</date>
+  <millis>1687712732352</millis>
+  <nanos>974011</nanos>
+  <sequence>10</sequence>
+  <logger>exercise.servlet.SessionServlet</logger>
+  <level>INFO</level>
+  <class>exercise.servlet.SessionServlet</class>
+  <method>login</method>
+  <thread>29</thread>
+  <message>Пользователь с email: lavern.keeling@gmail.com авторизовался.</message>
+</record>
+<record>
+  <date>2023-06-25T17:05:32.371589591Z</date>
+  <millis>1687712732371</millis>
+  <nanos>589591</nanos>
+  <sequence>11</sequence>
+  <logger>org.apache.coyote.http11.Http11NioProtocol</logger>
+  <level>INFO</level>
+  <class>org.apache.coyote.AbstractProtocol</class>
+  <method>pause</method>
+  <thread>1</thread>
+  <message>Pausing ProtocolHandler ["http-nio-auto-1-43467"]</message>
+</record>
+<record>
+  <date>2023-06-25T17:05:32.380393992Z</date>
+  <millis>1687712732380</millis>
+  <nanos>393992</nanos>
+  <sequence>12</sequence>
+  <logger>org.apache.catalina.core.StandardService</logger>
+  <level>INFO</level>
+  <class>org.apache.catalina.core.StandardService</class>
+  <method>stopInternal</method>
+  <thread>1</thread>
+  <message>Stopping service [Tomcat]</message>
+</record>
+<record>
+  <date>2023-06-25T17:05:32.390072698Z</date>
+  <millis>1687712732390</millis>
+  <nanos>72698</nanos>
+  <sequence>13</sequence>
+  <logger>org.apache.catalina.loader.WebappClassLoaderBase</logger>
+  <level>WARNING</level>
+  <class>org.apache.catalina.loader.WebappClassLoaderBase</class>
+  <method>clearReferencesObjectStreamClassCaches</method>
+  <thread>19</thread>
+  <message>When running on Java 9 or later you need to add "--add-opens=java.base/java.io=null" to the JVM command line arguments to enable ObjectStream cache memory leak protection. Alternatively, you can suppress this warning by disabling ObjectStream class cache memory leak protection.</message>
+</record>
+<record>
+  <date>2023-06-25T17:05:32.394075868Z</date>
+  <millis>1687712732394</millis>
+  <nanos>75868</nanos>
+  <sequence>14</sequence>
+  <logger>org.apache.catalina.loader.WebappClassLoaderBase</logger>
+  <level>WARNING</level>
+  <class>org.apache.catalina.loader.WebappClassLoaderBase</class>
+  <method>checkThreadLocalsForLeaks</method>
+  <thread>19</thread>
+  <message>When running on Java 9 or later you need to add "--add-opens=java.base/java.lang=null" to the JVM command line arguments to enable ThreadLocal memory leak detection. Alternatively, you can suppress this warning by disabling ThreadLocal memory leak detection.</message>
+</record>
+<record>
+  <date>2023-06-25T17:05:32.396921133Z</date>
+  <millis>1687712732396</millis>
+  <nanos>921133</nanos>
+  <sequence>15</sequence>
+  <logger>org.apache.catalina.loader.WebappClassLoaderBase</logger>
+  <level>WARNING</level>
+  <class>org.apache.catalina.loader.WebappClassLoaderBase</class>
+  <method>clearReferencesRmiTargets</method>
+  <thread>19</thread>
+  <message>When running on Java 9 or later you need to add "--add-opens=java.rmi/sun.rmi.transport=null" to the JVM command line arguments to enable RMI Target memory leak detection. Alternatively, you can suppress this warning by disabling RMI Target memory leak detection.</message>
+</record>
+<record>
+  <date>2023-06-25T17:05:32.405652068Z</date>
+  <millis>1687712732405</millis>
+  <nanos>652068</nanos>
+  <sequence>16</sequence>
+  <logger>org.apache.coyote.http11.Http11NioProtocol</logger>
+  <level>INFO</level>
+  <class>org.apache.coyote.AbstractProtocol</class>
+  <method>stop</method>
+  <thread>1</thread>
+  <message>Stopping ProtocolHandler ["http-nio-auto-1-43467"]</message>
+</record>
+</log>
