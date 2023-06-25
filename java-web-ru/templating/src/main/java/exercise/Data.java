@@ -12,7 +12,7 @@ import java.util.stream.Collectors;
 import java.util.Collections;
 
 public class Data {
-    private static final int USERS_COUNT = 5;
+    private static final int USERS_COUNT = 100;
 
     public static List<Map<String, String>> getUsers() {
         Random random = new Random(123);
