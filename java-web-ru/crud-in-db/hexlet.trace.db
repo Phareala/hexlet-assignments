@@ -1,0 +1,69 @@
+2023-07-09 01:26:58 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "COMPANIES" not found; SQL statement:
+INSERT INTO companies (name) VALUES (?) [42102-200]
+2023-07-09 01:28:33 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "COMPANIES" not found; SQL statement:
+INSERT INTO companies (title, body) VALUES (?, ?) [42102-200]
+2023-07-09 01:28:51 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "COMPANIES" not found; SQL statement:
+INSERT INTO companies (title, body) VALUES (?, ?); [42102-200]
+2023-07-09 01:28:54 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "COMPANIES" not found; SQL statement:
+INSERT INTO companies (title, body) VALUES (?, ?); [42102-200]
+2023-07-09 01:29:01 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "COMPANIES" not found; SQL statement:
+INSERT INTO companies (title, body) VALUES (?, ?); [42102-200]
+2023-07-09 01:31:49 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "COMPANIES" not found; SQL statement:
+UPDATE companies SET name=? WHERE id=? [42102-200]
+2023-07-09 01:32:52 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "COMPANIES" not found; SQL statement:
+UPDATE companies SET name=? WHERE id=? [42102-200]
+2023-07-09 01:32:55 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "COMPANIES" not found; SQL statement:
+UPDATE companies SET name=? WHERE id=? [42102-200]
+2023-07-09 01:32:58 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "COMPANIES" not found; SQL statement:
+UPDATE companies SET name=? WHERE id=? [42102-200]
+2023-07-09 01:33:20 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Column "NAME" not found; SQL statement:
+UPDATE articles SET name=? WHERE id=? [42122-200]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:453)
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:429)
+	at org.h2.message.DbException.get(DbException.java:205)
+	at org.h2.message.DbException.get(DbException.java:181)
+	at org.h2.table.Table.getColumn(Table.java:703)
+	at org.h2.command.Parser.readTableColumn(Parser.java:1274)
+	at org.h2.command.Parser.parseUpdateSetClause(Parser.java:1325)
+	at org.h2.command.Parser.parseUpdate(Parser.java:1290)
+	at org.h2.command.Parser.parsePrepared(Parser.java:1005)
+	at org.h2.command.Parser.parse(Parser.java:843)
+	at org.h2.command.Parser.parse(Parser.java:815)
+	at org.h2.command.Parser.prepareCommand(Parser.java:738)
+	at org.h2.engine.Session.prepareLocal(Session.java:657)
+	at org.h2.engine.Session.prepareCommand(Session.java:595)
+	at org.h2.jdbc.JdbcConnection.prepareCommand(JdbcConnection.java:1235)
+	at org.h2.jdbc.JdbcPreparedStatement.<init>(JdbcPreparedStatement.java:76)
+	at org.h2.jdbc.JdbcConnection.prepareStatement(JdbcConnection.java:352)
+	at exercise.servlet.ArticlesServlet.updateArticle(ArticlesServlet.java:252)
+	at exercise.servlet.ArticlesServlet.doPost(ArticlesServlet.java:100)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:681)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:764)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:232)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:167)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:202)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:97)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:544)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:143)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:81)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:78)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:364)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:624)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:831)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1651)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.base/java.lang.Thread.run(Thread.java:833)
