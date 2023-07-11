@@ -85,8 +85,8 @@ public final class ArticleController {
     public static Handler updateArticle = ctx -> {
         // BEGIN
         long id = ctx.pathParamAsClass("id", Long.class).getOrDefault(null);
-        String body = ctx.formParam("body");
         String title = ctx.formParam("title");
+        String body = ctx.formParam("body");
         long categoryId = ctx.formParamAsClass("categoryId", Long.class).getOrDefault(null);
         new QArticle()
                 .id.equalTo(id)
@@ -107,11 +107,8 @@ public final class ArticleController {
         Article article = new QArticle()
                 .id.equalTo(id)
                 .findOne();
-        List<Category> categories = new QCategory()
-                .findList();
+
         ctx.attribute("article", article);
-        ctx.attribute("categories", categories);
-        ctx.sessionAttribute("article", article);
         ctx.render("articles/delete.html");
         // END
     };
@@ -119,10 +116,9 @@ public final class ArticleController {
     public static Handler destroyArticle = ctx -> {
         // BEGIN
         long id = ctx.pathParamAsClass("id", Long.class).getOrDefault(null);
-        Objects.requireNonNull(new QArticle()
-                        .id.equalTo(id)
-                        .findOne())
-                .delete();
+        new QArticle()
+                .id.equalTo(id)
+                        .delete();
         ctx.sessionAttribute("flash", "Статья успешно удалена");
         ctx.redirect("/articles");
         // END
