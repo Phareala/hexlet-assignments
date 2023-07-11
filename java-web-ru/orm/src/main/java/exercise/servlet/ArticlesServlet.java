@@ -106,7 +106,6 @@ public class ArticlesServlet extends HttpServlet {
         long id = Long.parseLong(getId(request));
 
         // BEGIN
-//        var tempID = request.getParameter("id");
         Article article = new QArticle()
                 .id.equalTo(id)
                 .findOne();
