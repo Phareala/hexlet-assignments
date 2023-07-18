@@ -1,0 +1,23 @@
+databaseChangeLog:
+  -  changeSet:
+       id: 1
+       author: Phareal
+       changes:
+         -  createTable:
+              tableName:  person
+              columns:
+                - column:
+                    name: id
+                    type: bigint
+                    # Указываем что значение поля генерируется автоматически
+                    autoIncrement: true
+                    # Указываем, что значение является первичным ключом
+                    constraints:
+                      primaryKey: true
+                      nullable: false
+                -  column:
+                     name:  first_name
+                     type:  varchar(250)
+                -  column:
+                     name:  last_name
+                     type:  varchar(50)
