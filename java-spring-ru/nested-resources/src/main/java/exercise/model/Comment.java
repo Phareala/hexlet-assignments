@@ -21,13 +21,13 @@ public class Comment {
     // BEGIN
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private long id;
+    long id;
 
     @Lob
-    private String content;
+    String content;
 
     @JsonIgnore
     @ManyToOne(fetch = FetchType.LAZY)
-    private Post post;
+    Post post;
     // END
 }

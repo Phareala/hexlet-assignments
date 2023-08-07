@@ -27,51 +27,46 @@ public class CommentController {
     private final PostRepository postRepository;
 
     // BEGIN
-    @GetMapping(path = "{postId}/comments")
-    public Iterable<Comment> getAllCommentsForPost(@PathVariable(name = "postId") Long postId) {
-
+    @GetMapping("/{postId}/comments")
+    public Iterable<Comment> getAllComments(@PathVariable("postId") long postId) {
         return commentRepository.findAllByPostId(postId);
     }
 
-    @GetMapping(path = "{postId}/comments/{commentId}")
-    public Comment getCommentForPost(@PathVariable(name = "commentId") Long commentId,
-                                     @PathVariable(name = "postId") Long postId) {
+    @GetMapping("/{postId}/comments/{commentId}")
+    public Comment getComment(@PathVariable("postId") long postId,
+                              @PathVariable("commentId") long id) {
 
-        return commentRepository.findByIdAndPostId(commentId, postId)
-                .orElseThrow(() -> new ResourceNotFoundException("Comment not found"));
+        return commentRepository.findByIdAndPostId(id, postId)
+                .orElseThrow(() -> new ResourceNotFoundException("No such comment"));
     }
 
-    @PostMapping(path = "{postId}/comments")
-    public void createCommentForPost(@PathVariable(name = "postId") Long postId,
-                                     @RequestBody CommentDto commentDto) {
-
-        Post post = postRepository.findById(postId).
-                orElseThrow(() -> new ResourceNotFoundException("Post not found"));
-
-        Comment comment = new Comment();
+    @PostMapping("/{postId}/comments")
+    public void createComment(@RequestBody Comment comment,
+                              @PathVariable("postId") Long postId) {
+        Post post = postRepository.findById(postId)
+                .orElseThrow(() -> new ResourceNotFoundException("No such post"));
         comment.setPost(post);
-        comment.setContent(commentDto.content());
         commentRepository.save(comment);
     }
 
-    @PatchMapping(path = "{postId}/comments/{commentId} ")
-    public void updateComment(@PathVariable(name = "postId") Long postId,
-                              @PathVariable(name = "commentId") Long commentId,
-                              @RequestBody CommentDto commentDto) {
+    @PatchMapping("/{postId}/comments/{commentId}")
+    public void updateComment(@PathVariable("postId") long postId,
+                              @PathVariable("commentId") long commentId,
+                              @RequestBody Comment comment) {
 
-        Comment comment = commentRepository.findByIdAndPostId(commentId, postId)
-                .orElseThrow(() -> new ResourceNotFoundException("Comment not found"));
-        comment.setContent(commentDto.content());
+        Comment commentFromDB = commentRepository.findByIdAndPostId(commentId, postId)
+                .orElseThrow(() -> new ResourceNotFoundException("No such comment"));
+        commentFromDB.setContent(comment.getContent());
         commentRepository.save(comment);
     }
 
-    @DeleteMapping(path = "{postId}/comments/{commentId}")
-    public void deleteComment(@PathVariable(name = "postId") Long postId,
-                              @PathVariable(name = "commentId") Long commentId) {
+    @DeleteMapping("/{postId}/comments/{commentId}")
+    public void deleteComment(@PathVariable("postId") long postId,
+                              @PathVariable("commentId") long commentId) {
 
-        Comment comment = commentRepository.findByIdAndPostId(commentId, postId)
-                .orElseThrow(() -> new ResourceNotFoundException("Comment not found"));
-        commentRepository.delete(comment);
+        Comment commentFromDB = commentRepository.findByIdAndPostId(postId, commentId)
+                .orElseThrow(() -> new ResourceNotFoundException("No such comment"));
+        commentRepository.delete(commentFromDB);
     }
     // END
 }
